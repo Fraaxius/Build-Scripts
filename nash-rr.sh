@@ -24,18 +24,10 @@ git clone https://github.com/DoritosMotorola/doritos_vendor_motorola.git -b line
 git clone https://github.com/Fraaxius-DeviceTrees/android_device_motorola_nash.git -b rros-ten device/motorola/nash
 git clone https://github.com/Fraaxius-DeviceTrees/android_kernel_motorola_msm8998.git -b lineage-17.1 kernel/motorola/msm8998
 
-# Sync from latest sources
+# Time to cook!
 
 repo sync -f --force-sync --no-clone-bundle
-
-# RR setups
-# Thanks to qaotyk
-
--include build/envsetup.sh
-echo n/ "Waiting the RROS setup" /n
-
-# Time to cook
-
+. build/envsetup.sh
 lunch rr_nash-userdebug
 export RR_BUILDTYPE=Official
 mka bacon

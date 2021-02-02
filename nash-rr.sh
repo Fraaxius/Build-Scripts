@@ -28,6 +28,6 @@ git clone https://github.com/Fraaxius-DeviceTrees/android_kernel_motorola_msm899
 
 repo sync -f --force-sync --no-clone-bundle
 . build/envsetup.sh
-## lunch rr_nash-userdebug
-## export RR_BUILDTYPE=Official
-## mka bacon
+lunch rr_nash-userdebug
+export RR_BUILDTYPE=Official
+mka bacon
